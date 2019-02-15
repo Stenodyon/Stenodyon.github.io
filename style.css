@@ -1,96 +1,111 @@
 html {
     scroll-behavior: smooth;
+    font-family: "Helvetica";
 }
 
-.sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+.header {
     display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .active {
-    background-color: #222;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    display: none;
-}
-
-.toprow {
     position: fixed;
+    background-color: black;
     top: 0;
     left: 0;
-    overflow: hidden;
+    margin: 0 auto;
     width: 100%;
-    background-color: #111;
+    height: 60px !important;
+    z-index: 10;
+    overflow: hidden;
+}
+
+input[type="checkbox"] {
     display: none;
 }
 
-.toprow a {
-    color: #818181;
-    text-decoration: none;
-    display: block;
-    font-size: 36px;
-    padding: 8px 16px 8px 16px;
+.sidenavIconToggle {
+    box-sizing: border-box;
+    left: 15px;
+    top: 22px;
+    position: absolute;
+    z-index: 20;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+}
+
+.horizontal {
+    position: relative;
+    margin-top: 3px;
+    box-sizing: border-box;
     float: left;
 }
 
-.toprow a:hover {
-    background-color: #333;
+.diagonal {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
 }
 
-body {
-    transition: background-color .5s;
-    background: url("bg1.jpg") no-repeat center center fixed;
-    background-size: cover;
-
-    color: #f2f2f2;
+.part-2 {
+    margin-top: 3px;
 }
 
-#main {
-    margin-left: 250px;
+input[type="checkbox"]:checked ~ .sidenavIconToggle > .horizontal {
+    opacity: 0;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+input[type="checkbox"]:checked ~ .sidenavIconToggle > .part-1 {
+    transform: rotate(135deg);
+    margin-top: 8px;
 }
 
-@media screen and (max-width: 800px) {
-    #main {
-        margin-left: 0;
-        margin-top: 75px;
-    }
-    .toprow {display: block;}
-    .sidenav {width: 0;}
-    .sidenav .closebtn {display: block;}
+input[type="checkbox"]:checked ~ .sidenavIconToggle > .part-2 {
+    transform: rotate(-135deg);
+    margin-top: -9px;
 }
 
-section {
+#sidenav {
+    display: block;
+    position: fixed;
+    margin-top: 60px;
+    left: 0px;
+    background-color: black;
+    width: 250px;
     height: 100vh;
+    overflow: hidden;
+
+    transition: transform 250ms ease-in-out;
+    transform: translateX(-250px); /* Hides the menu by default */
+}
+
+.sidenavMenu {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #222;
+}
+
+.sidenavMenu > li {
+    list-style: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #222;
+}
+
+input[type="checkbox"]:checked ~ #sidenav {
+    transform: translateX(0);
+}
+
+.main {
+    margin-top: 60px;
 }

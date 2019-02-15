@@ -2,36 +2,31 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="sidemenu.js"></script>
 
         <title>Kévin Le Run's page</title>
     </head>
     <body>
-        <div class="sidenav" id="sidemenu">
-            <a href="javascript:void(0);" class="closebtn">
-                &times;
-            </a>
-            <a href="#home" class="active">Home</a>
-            <a href="#education">Education</a>
+        <div class="header">
+            <input type="checkbox" id="openSideNav">
+            <label for="openSideNav" class="sidenavIconToggle">
+                <span class="spinner diagonal part-1"></span>
+                <span class="spinner horizontal"></span>
+                <span class="spinner diagonal part-2"></span>
+            </label>
+            <div id="sidenav">
+                <ul class="sidenavMenu">
+                    <li>Home</li>
+                    <li>Education</li>
+                </ul>
+            </div>
         </div>
-        <div class="toprow">
-            <a href="javascript:void(0);" class="openbtn" onclick="onOpenNav()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-
-        <div id="main">
-            <section id="home">
-                <h1>Home</h1>
-            </section>
-            <section id="education">
-                <h1>Education</h1>
-            </section>
+        <div class="main">
+            Kévin Le Run
         </div>
     </body>
 </html>
