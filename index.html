@@ -2,31 +2,196 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="sidemenu.js"></script>
-
-        <title>Kévin Le Run's page</title>
+        <link rel="stylesheet" href="reset.css" type="text/css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="cv.css" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <title>CV</title>
     </head>
     <body>
-        <div class="header">
-            <input type="checkbox" id="openSideNav">
-            <label for="openSideNav" class="sidenavIconToggle">
-                <span class="spinner diagonal part-1"></span>
-                <span class="spinner horizontal"></span>
-                <span class="spinner diagonal part-2"></span>
-            </label>
-            <div id="sidenav">
-                <ul class="sidenavMenu">
-                    <li>Home</li>
-                    <li>Education</li>
-                </ul>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button
+                 class="navbar-toggler"
+                 type="button"
+                 data-toggle="collapse"
+                 data-target="#nav-toggle1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="nav-toggle1">
+                    <span class="navbar-brand"></span>
+                    <ul class="navbar-nav w-50 justify-content-around">
+                        <a class="navbar-item navbar-link" href="#home">Home</a>
+                        <a class="navbar-item navbar-link" href="#work">Work</a>
+                        <a class="navbar-item navbar-link" href="#education">Education</a>
+                        <a class="navbar-item navbar-link" href="#contact">Contact</a>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col-1">
+                </div>
+                <div class="col-xl-3 cv-card cv-head">
+                    <div class="face"></div>
+                    <span class="name">Kévin Le Run</span>
+                    <span class="title">Embedded Software Engineer</span>
+                </div>
+                <div class="col-1">
+                </div>
+                <div class="col-xl-6 cv-card cv-overview">
+                    <div class="cv-header">
+                        <span class="cv-header-title">Skills</span>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center cventry">
+                            <div class="col-sm-4 cventry-left">
+                                <div class="cventry-type">Software Development</div>
+                            </div>
+                            <div class="col-sm-8 cventry-right">
+                                <div class="cventry-location">Strong experience with C/C++, git, GNU tools such as make or gdb. Some experience with Java.</div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center cventry">
+                            <div class="col-sm-4 cventry-left">
+                                <div class="cventry-type">Embedded Software</div>
+                            </div>
+                            <div class="col-sm-8 cventry-right">
+                                <div class="cventry-location">Software development and deployment on embedded targets. Experience with embedded linux.</div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center cventry">
+                            <div class="col-sm-4 cventry-left">
+                                <div class="cventry-type">Frontend Development</div>
+                            </div>
+                            <div class="col-sm-8 cventry-right">
+                                <div class="cventry-location">Experience with HTML5. I built this page.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                </div>
             </div>
-        </div>
-        <div class="main">
-            Kévin Le Run
-        </div>
+
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-xl-10 cv-card" id="work">
+                    <div class="cv-header">
+                        <span class="cv-header-title">Work Experience</span>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center cventry">
+                            <div class="col-sm-8 cventry-left">
+                                <div class="cventry-type">Research Internship</div>
+                                <div class="cventry-title">Generating art in the style of Keith Haring with Plex grammars</div>
+                            </div>
+                            <div class="col-sm-4 cventry-right">
+                                <div class="cventry-date">Summer 2016</div>
+                                <div class="cventry-location"><a href="https://www.inria.fr/en/centre/grenoble">INRIA Grenoble</a></div>
+                            </div>
+                            <div class="col-sm-12 wikipedia-ref">
+                                This list is <span class="wikipedia-blue
+                                incomplete">incomplete<span
+                                                   class="incomplete-tooltip">I
+                                                   am looking for a
+                                           job</span></span> ; you can help by
+                                   <a href="mailto:lerunkevin@gmail.com?subject=Job Offer"
+                                      class="wikipedia-blue">expanding it</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-xl-6 cv-card" id="education">
+                    <div class="cv-header">
+                        <span class="cv-header-title">Education</span>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center cventry">
+                            <div class="col-sm-8 cventry-left">
+                                <div class="cventry-type">Baccalauréat Scientifique</div>
+                                <div class="cventry-title">Lycée Georges Dumézil, Vernon</div>
+                            </div>
+                            <div class="col-sm-4 cventry-right">
+                                <div class="cventry-date">2012</div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center cventry">
+                            <div class="col-sm-8 cventry-left">
+                                <div class="cventry-type">CPGE PTSI</div>
+                                <div class="cventry-title">Lycée Blaise Pascal, Rouen</div>
+                            </div>
+                            <div class="col-sm-4 cventry-right">
+                                <div class="cventry-date">2012 - 2015</div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center cventry">
+                            <div class="col-sm-8 cventry-left">
+                                <div class="cventry-type">Bachelor's degree in Computer Science</div>
+                                <div class="cventry-title">École Normale Supérieure de Cachan</div>
+                            </div>
+                            <div class="col-sm-4 cventry-right">
+                                <div class="cventry-date">2016</div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center cventry">
+                            <div class="col-sm-8 cventry-left">
+                                <div class="cventry-type">Master's degree in Embedded and Mobile Software Development</div>
+                                <div class="cventry-title">Université de Rouen</div>
+                            </div>
+                            <div class="col-sm-4 cventry-right">
+                                <div class="cventry-date">2018 - Today</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1"></div>
+                <div class="col-xl-3 cv-card" id="contact">
+                    <div class="cv-header">
+                        <span class="cv-header-title">Contact</span>
+                    </div>
+                    <ul class="contact">
+                        <li>
+                            <a href="mailto:lerunkevin@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                                <span class="name">email</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Stenodyon">
+                                <i class="fab fa-github"></i>
+                                <span class="name">Github</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/k%C3%A9vin-le-run-6b0017153/">
+                                <i class="fab fa-linkedin"></i>
+                                <span class="name">LinkedIn</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </main>
+
+        <footer>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
