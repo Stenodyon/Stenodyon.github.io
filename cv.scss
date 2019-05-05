@@ -7,6 +7,8 @@ $light-gray: #F6F6F6;
 $border-width: 3px;
 
 body {
+    background-color: $light-gray;
+
     @media screen and (min-width: 992px) {
         height: 100vh;
     }
@@ -58,7 +60,6 @@ header {
 main {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: $light-gray;
 
     a:hover {
         text-decoration: none;
