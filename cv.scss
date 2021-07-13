@@ -69,6 +69,33 @@ main {
         padding-top: 50px;
     }
 
+    .has-tooltip {
+        position: relative;
+        display: inline-block;
+
+        .this-tooltip {
+            visibility: hidden;
+
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            width: 120px;
+            padding: 5px;
+            border-radius: 5px;
+
+
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            z-index: 1;
+        }
+
+        &:hover .this-tooltip {
+            visibility: visible;
+        }
+    }
+
     .cv-card {
         background-color: #fff;
         min-height: 250px;
@@ -177,33 +204,6 @@ main {
             margin-top: 50px;
         }
 
-        .incomplete {
-            position: relative;
-            display: inline-block;
-
-            .incomplete-tooltip {
-                visibility: hidden;
-
-                background-color: #555;
-                color: #fff;
-                text-align: center;
-                width: 120px;
-                padding: 5px;
-                border-radius: 5px;
-
-
-                position: absolute;
-                bottom: 100%;
-                left: 50%;
-                margin-left: -60px;
-                z-index: 1;
-            }
-
-            &:hover .incomplete-tooltip {
-                visibility: visible;
-            }
-        }
-
         .wikipedia-blue {
             cursor: pointer;
             text-decoration: none;
@@ -253,11 +253,14 @@ main {
                 font-weight: bold;
             }
 
-            transition: color 0.1s;
             color: #555;
 
-            &:hover {
-                color: #aaa;
+            &:not(.disabled) {
+                transition: color 0.1s;
+
+                &:hover {
+                    color: #aaa;
+                }
             }
         }
     }
